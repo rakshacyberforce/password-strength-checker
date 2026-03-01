@@ -1,33 +1,71 @@
-# 🔐 Password Strength Checker (Java CLI)
+# 💀 PASSWORD STRENGTH ANALYZER TOOL
+### Made by Kunj Patel
 
-This tool is developed by me as a Java-based CLI project to analyze password strength.
+A Java-based CLI tool that analyzes password strength and generates secure passwords.
 
-## 📌 About the Project
+---
 
-I built this project to improve my Java programming skills and understand basic cybersecurity concepts like password validation.
+## 🚀 How To Access & Run This Tool
 
-The tool checks:
+### Step 1: Download / Clone the Project
 
-- Minimum 8 characters
-- At least one uppercase letter
-- At least one lowercase letter
-- At least one number
-- At least one special character
+If Git is installed:
 
-Based on these rules, it classifies the password as:
+git clone https://github.com/YOUR-USERNAME/password-strength-checker.git
 
-- WEAK
-- MEDIUM
-- STRONG
+Or download ZIP from GitHub and extract it.
 
-## 🚀 How to Run
+---
 
-Compile:
+### Step 2: Open Terminal / Command Prompt
+
+Go inside the project folder:
+
+cd password-strength-checker
+
+---
+
+### Step 3: Compile the Program
+
 javac PasswordStrengthCLI.java
 
-Run:
+---
+
+### Step 4: Run the Program
+
 java PasswordStrengthCLI
 
-## 👨‍💻 Author
+---
 
-Developed by kunj patel 
+## 💻 Requirements
+
+- Java JDK 17 or above installed
+
+Check installation:
+
+java -version
+javac -version
+
+---
+
+## 🔥 Features
+
+- Multi-Mode CLI
+- Strength Percentage Meter
+- Progress Bar
+- Password Generator
+- Weak Password Suggestions
+- Scanning Animation
+
+---
+
+## 📌 Works On
+
+- Windows
+- Linux
+- Kali Linux
+- Any system with Java installed
+
+---
+
+💚 Developed by Kunj Patel
