@@ -1,40 +1,33 @@
-\# Password Strength Checker (CLI - Java)
+# 🔐 Password Strength Checker (Java CLI)
 
+This tool is developed by me as a Java-based CLI project to analyze password strength.
 
+## 📌 About the Project
 
-\## Description
+I built this project to improve my Java programming skills and understand basic cybersecurity concepts like password validation.
 
-A simple Java-based CLI tool to check password strength.
+The tool checks:
 
+- Minimum 8 characters
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one number
+- At least one special character
 
+Based on these rules, it classifies the password as:
 
-\## Features
+- WEAK
+- MEDIUM
+- STRONG
 
-\- Checks minimum length (8 characters)
+## 🚀 How to Run
 
-\- Detects uppercase letters
-
-\- Detects lowercase letters
-
-\- Detects numbers
-
-\- Detects special characters
-
-\- Provides strength rating (Weak / Medium / Strong)
-
-
-
-\## How to Run
-
-
-
-\### Compile
-
+Compile:
 javac PasswordStrengthCLI.java
 
-
-
-\### Run
-
+Run:
 java PasswordStrengthCLI
 
+## 👨‍💻 Author
+
+Developed by kunj patel 
