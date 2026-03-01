@@ -2,11 +2,29 @@ import java.util.Scanner;
 
 public class PasswordStrengthCLI {
 
+    // Green color for hacker theme
+    public static final String GREEN = "\u001B[32m";
+    public static final String RED = "\u001B[31m";
+    public static final String RESET = "\u001B[0m";
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter your password: ");
+        // Hacker Banner
+        System.out.println(GREEN);
+        System.out.println("==============================================");
+        System.out.println("     ██████╗  █████╗ ███████╗███████╗");
+        System.out.println("     ██╔══██╗██╔══██╗██╔════╝██╔════╝");
+        System.out.println("     ██████╔╝███████║███████╗█████╗  ");
+        System.out.println("     ██╔═══╝ ██╔══██║╚════██║██╔══╝  ");
+        System.out.println("     ██║     ██║  ██║███████║███████╗");
+        System.out.println("==============================================");
+        System.out.println("        PASSWORD STRENGTH ANALYZER");
+        System.out.println("==============================================");
+        System.out.print(RESET);
+
+        System.out.print(GREEN + "\nEnter your password: " + RESET);
         String password = sc.nextLine();
 
         int score = 0;
@@ -23,29 +41,28 @@ public class PasswordStrengthCLI {
         if (hasDigit) score++;
         if (hasSpecial) score++;
 
-        System.out.println("\n--- Password Analysis ---");
+        System.out.println(GREEN + "\n[ PASSWORD ANALYSIS ]");
+        System.out.println("----------------------------------------------");
 
-        if (!hasLength)
-            System.out.println("Minimum 8 characters required");
+        System.out.println((hasLength ? "[✓]" : "[✗]") + " Minimum 8 characters");
+        System.out.println((hasUpper ? "[✓]" : "[✗]") + " Uppercase letter");
+        System.out.println((hasLower ? "[✓]" : "[✗]") + " Lowercase letter");
+        System.out.println((hasDigit ? "[✓]" : "[✗]") + " Number");
+        System.out.println((hasSpecial ? "[✓]" : "[✗]") + " Special character");
 
-        if (!hasUpper)
-            System.out.println("Add at least one uppercase letter");
+        System.out.println("----------------------------------------------");
 
-        if (!hasLower)
-            System.out.println("Add at least one lowercase letter");
+        if (score <= 2) {
+            System.out.println(RED + ">> PASSWORD STRENGTH: WEAK" + RESET);
+        } 
+        else if (score <= 4) {
+            System.out.println(GREEN + ">> PASSWORD STRENGTH: MEDIUM" + RESET);
+        } 
+        else {
+            System.out.println(GREEN + ">> PASSWORD STRENGTH: STRONG" + RESET);
+        }
 
-        if (!hasDigit)
-            System.out.println("Add at least one number");
-
-        if (!hasSpecial)
-            System.out.println("Add at least one special character");
-
-        if (score <= 2)
-            System.out.println("Password Strength: WEAK");
-        else if (score <= 4)
-            System.out.println("Password Strength: MEDIUM");
-        else
-            System.out.println("Password Strength: STRONG");
+        System.out.println(GREEN + "==============================================" + RESET);
 
         sc.close();
     }
